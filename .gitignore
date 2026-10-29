@@ -1,0 +1,15 @@
+node_modules
+.env
+artifacts
+cache
+typechain-types
+coverage
+coverage.json
+deployments
+
+.deps
+
+*.wasm
+
+# SEOA key files (10_generate_and_register_seoas.ts) — plaintext private keys
+swc-config*.json

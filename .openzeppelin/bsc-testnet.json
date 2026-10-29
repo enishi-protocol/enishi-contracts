@@ -1,0 +1,731 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x55E06cc1B7290DEAB32aaB88Ff9582e99789942B",
+      "txHash": "0x1516cb1bc614a0364c17732a7f58580b48beed933101e59c75a95cb7729d70b1",
+      "kind": "uups"
+    },
+    {
+      "address": "0x71fF2F9a52190e08D642773398D38a690B3Dbd7b",
+      "txHash": "0xaf2a76084af2396bfad0d445bc75d73ae2eefa4c4453f22e2d7f3126f8e0883d",
+      "kind": "uups"
+    },
+    {
+      "address": "0x33CdF23A2084cac6EFf9E826c7Ead072941b495A",
+      "txHash": "0x6fefe7bb1bbd646dde6d50497e10820df51e8f7a442fd8be0bf53ced905538fa",
+      "kind": "uups"
+    },
+    {
+      "address": "0x1CaF1F952B63F1bad337dd20A5FF1b6567355697",
+      "txHash": "0x373855c311730edeabd7c1ae68e4face94060390086cc71ecb3aa65916a6d913",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "fde50414c8f9c6d6439968b54ac11e59afd140d8b0fd44e5ebe16a36e7171a2c": {
+      "address": "0xC15a41FA3FF026D5609B4AB23e7842a525C3E6cB",
+      "txHash": "0x9c561a098c89e5a8db99b582982babf29ebde74de750a339f8786ab8dd594902",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "ENC_TOKEN",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_contract(IENC)2681",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:56"
+          },
+          {
+            "label": "REFERRAL_REGISTRY",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_contract(IReferralRegistry)2926",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:57"
+          },
+          {
+            "label": "commissionBps",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint32,t_uint16)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:61"
+          },
+          {
+            "label": "validDurations",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_uint32)dyn_storage",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          },
+          {
+            "label": "lockOf",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_struct(LockInfo)2961_storage)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)299_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)13_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_uint32)dyn_storage": {
+            "label": "uint32[]",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IENC)2681": {
+            "label": "contract IENC",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IReferralRegistry)2926": {
+            "label": "contract IReferralRegistry",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(LockInfo)2961_storage)": {
+            "label": "mapping(address => struct ENCLock.LockInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint32,t_uint16)": {
+            "label": "mapping(uint32 => uint16)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LockInfo)2961_storage": {
+            "label": "struct ENCLock.LockInfo",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "expiry",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "durationDays",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "e1a73551b3a7c2d0a7510f23734942beb8bef7763711d7c3dba899751237f539": {
+      "address": "0xF32954FEA23faa957AAe21300015C31b3f143AAD",
+      "txHash": "0x99fc4fa4e85163485c71045093953278068c801c57044d3d34b21f5690e07cdc",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "ENC_TOKEN",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_contract(IENC)3032",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:56"
+          },
+          {
+            "label": "REFERRAL_REGISTRY",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_contract(IReferralRegistry)3254",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:57"
+          },
+          {
+            "label": "commissionBps",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint32,t_uint16)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:61"
+          },
+          {
+            "label": "validDurations",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_uint32)dyn_storage",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          },
+          {
+            "label": "lockOf",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_struct(LockInfo)3289_storage)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)339_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)13_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_uint32)dyn_storage": {
+            "label": "uint32[]",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IENC)3032": {
+            "label": "contract IENC",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IReferralRegistry)3254": {
+            "label": "contract IReferralRegistry",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(LockInfo)3289_storage)": {
+            "label": "mapping(address => struct ENCLock.LockInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint32,t_uint16)": {
+            "label": "mapping(uint32 => uint16)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LockInfo)3289_storage": {
+            "label": "struct ENCLock.LockInfo",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "expiry",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "durationDays",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "1633e42c0357d8027227329d610377c54839b059d466eabc3c969b4fc0c35530": {
+      "address": "0xF3e80aA6014834Bbb48DF910633A2a5949Fa5C94",
+      "txHash": "0x8f897853f4f9e8f8d5fc9101f8fae2635b46eb32840865d794f40c2447d19311",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "ENC_TOKEN",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_contract(IENC)2502",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:56"
+          },
+          {
+            "label": "REFERRAL_REGISTRY",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_contract(IReferralRegistry)2738",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:57"
+          },
+          {
+            "label": "commissionBps",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint32,t_uint16)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:61"
+          },
+          {
+            "label": "validDurations",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_uint32)dyn_storage",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          },
+          {
+            "label": "lockOf",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_struct(LockInfo)2773_storage)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:62"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)299_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)13_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_uint32)dyn_storage": {
+            "label": "uint32[]",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IENC)2502": {
+            "label": "contract IENC",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IReferralRegistry)2738": {
+            "label": "contract IReferralRegistry",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(LockInfo)2773_storage)": {
+            "label": "mapping(address => struct ENCLock.LockInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint32,t_uint16)": {
+            "label": "mapping(uint32 => uint16)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LockInfo)2773_storage": {
+            "label": "struct ENCLock.LockInfo",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "expiry",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "durationDays",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "c7c208ac84f2e034358a0f34e899af2a715d21f914d6cb89e231638a9cc4b92f": {
+      "address": "0xBDA2193FEfDBA2F75dFD69c45b4dCDa86c4bb35f",
+      "txHash": "0x5a2f06a9491dbb8cc74b049516262704ae2a322991cbc23d10529f87f6427986",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "ENC_TOKEN",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_contract(IENC)7905",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:55"
+          },
+          {
+            "label": "commissionBps",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint32,t_uint16)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:59"
+          },
+          {
+            "label": "validDurations",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint32)dyn_storage",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:59"
+          },
+          {
+            "label": "lockOf",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_struct(LockInfo)8794_storage)",
+            "contract": "ENCLock",
+            "src": "contracts/token/ENCLock.sol:61"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)710_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)13_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_uint32)dyn_storage": {
+            "label": "uint32[]",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IENC)7905": {
+            "label": "contract IENC",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(LockInfo)8794_storage)": {
+            "label": "mapping(address => struct ENCLock.LockInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint32,t_uint16)": {
+            "label": "mapping(uint32 => uint16)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LockInfo)8794_storage": {
+            "label": "struct ENCLock.LockInfo",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "expiry",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "durationDays",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
